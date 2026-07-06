@@ -73,14 +73,26 @@ export function Footer() {
         <div>
           <h3 className="text-sm font-semibold">Contact</h3>
           <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
-            <li className="flex items-center gap-2">
-              <Mail className="h-4 w-4 shrink-0 text-primary" /> hello@productze.com
+            <li>
+              <a
+                href={`mailto:${CONTACT.email}`}
+                className="flex items-center gap-2 transition-colors hover:text-foreground"
+              >
+                <Mail className="h-4 w-4 shrink-0 text-primary" /> {CONTACT.email}
+              </a>
+            </li>
+            <li>
+              <a
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 transition-colors hover:text-foreground"
+              >
+                <MessageCircle className="h-4 w-4 shrink-0 text-primary" /> {CONTACT.phoneDisplay}
+              </a>
             </li>
             <li className="flex items-center gap-2">
-              <Phone className="h-4 w-4 shrink-0 text-primary" /> +1 (555) 012-3456
-            </li>
-            <li className="flex items-center gap-2">
-              <MapPin className="h-4 w-4 shrink-0 text-primary" /> Remote · Worldwide
+              <MapPin className="h-4 w-4 shrink-0 text-primary" /> {CONTACT.location}
             </li>
           </ul>
         </div>
