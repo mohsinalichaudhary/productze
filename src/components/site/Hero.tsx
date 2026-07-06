@@ -27,7 +27,7 @@ export function Hero() {
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 transition-[background] duration-200"
         style={{
-          background: `radial-gradient(600px circle at ${glow.x}% ${glow.y}%, oklch(0.62 0.24 300 / 0.18), transparent 60%)`,
+          background: `radial-gradient(600px circle at ${glow.x}% ${glow.y}%, oklch(0.7 0.16 162 / 0.16), transparent 60%)`,
         }}
       />
       <ParticleField className="absolute inset-0 -z-10 h-full w-full" />
