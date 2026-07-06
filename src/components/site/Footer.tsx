@@ -21,11 +21,8 @@ export function Footer() {
     <footer className="relative mt-24 border-t border-border">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-4">
         <div className="md:col-span-1">
-          <Link to="/" className="flex items-center gap-2">
-            <span className="grid h-9 w-9 place-items-center rounded-xl gradient-brand shadow-[var(--glow-violet)]">
-              <Sparkles className="h-4 w-4 text-primary-foreground" />
-            </span>
-            <span className="text-lg font-bold">Productze</span>
+          <Link to="/">
+            <Logo />
           </Link>
           <p className="mt-4 max-w-xs text-sm text-muted-foreground">
             We build powerful digital products & online presence for businesses.
