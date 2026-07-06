@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { NAV_LINKS } from "@/lib/site-data";
 import { GlowButton } from "./GlowButton";
+import { Logo } from "./Logo";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
