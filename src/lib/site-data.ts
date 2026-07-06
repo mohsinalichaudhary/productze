@@ -116,3 +116,14 @@ export const PROCESS = [
   { step: "05", title: "Launch", desc: "Seamless go-live with zero downtime." },
   { step: "06", title: "Growth", desc: "Optimize, iterate, and scale continuously." },
 ] as const;
+
+export const CONTACT = {
+  whatsappNumber: "923430571260",
+  phoneDisplay: "+92 343 0571260",
+  email: "mohsinalichaudhary698@gmail.com",
+  location: "Remote · Worldwide",
+} as const;
+
+export const WHATSAPP_LINK = `https://wa.me/${CONTACT.whatsappNumber}?text=${encodeURIComponent(
+  "Hi Productze, I'd like to book a call about my project.",
+)}`;

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
-import { NAV_LINKS } from "@/lib/site-data";
+import { NAV_LINKS, WHATSAPP_LINK } from "@/lib/site-data";
 import { GlowButton } from "./GlowButton";
 import { Logo } from "./Logo";
 
@@ -29,7 +29,7 @@ export function Navbar() {
         </div>
 
         <div className="ml-auto hidden items-center gap-2 lg:flex">
-          <GlowButton to="/contact" variant="outline" className="px-5 py-2.5">
+          <GlowButton href={WHATSAPP_LINK} variant="outline" className="px-5 py-2.5">
             Book Call
           </GlowButton>
           <GlowButton to="/contact" className="px-5 py-2.5">
@@ -63,7 +63,7 @@ export function Navbar() {
             ))}
           </div>
           <div className="mt-3 grid grid-cols-2 gap-2">
-            <GlowButton to="/contact" variant="outline" className="w-full justify-center py-2.5">
+            <GlowButton href={WHATSAPP_LINK} variant="outline" className="w-full justify-center py-2.5">
               Book Call
             </GlowButton>
             <GlowButton to="/contact" className="w-full justify-center py-2.5">

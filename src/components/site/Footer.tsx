@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
-import { Github, Twitter, Linkedin, Instagram, Mail, MapPin, Phone } from "lucide-react";
+import { Linkedin, Instagram, Mail, MapPin, MessageCircle } from "lucide-react";
 import { Logo } from "./Logo";
-import { NAV_LINKS } from "@/lib/site-data";
+import { NAV_LINKS, CONTACT, WHATSAPP_LINK } from "@/lib/site-data";
 
 const RESOURCES = [
   { label: "Portfolio", to: "/portfolio" },
@@ -11,10 +11,10 @@ const RESOURCES = [
 ] as const;
 
 const SOCIALS = [
-  { icon: Twitter, label: "Twitter" },
-  { icon: Linkedin, label: "LinkedIn" },
-  { icon: Instagram, label: "Instagram" },
-  { icon: Github, label: "GitHub" },
+  { icon: MessageCircle, label: "WhatsApp", href: WHATSAPP_LINK },
+  { icon: Linkedin, label: "LinkedIn", href: "#" },
+  { icon: Instagram, label: "Instagram", href: "#" },
+  { icon: Mail, label: "Email", href: `mailto:${CONTACT.email}` },
 ];
 
 export function Footer() {
@@ -32,7 +32,9 @@ export function Footer() {
             {SOCIALS.map((s) => (
               <a
                 key={s.label}
-                href="#"
+                href={s.href}
+                target={s.href.startsWith("http") ? "_blank" : undefined}
+                rel={s.href.startsWith("http") ? "noopener noreferrer" : undefined}
                 aria-label={s.label}
                 className="grid h-9 w-9 place-items-center rounded-xl glass text-muted-foreground transition-colors hover:text-foreground"
               >
@@ -71,14 +73,26 @@ export function Footer() {
         <div>
           <h3 className="text-sm font-semibold">Contact</h3>
           <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
-            <li className="flex items-center gap-2">
-              <Mail className="h-4 w-4 shrink-0 text-primary" /> hello@productze.com
+            <li>
+              <a
+                href={`mailto:${CONTACT.email}`}
+                className="flex items-center gap-2 transition-colors hover:text-foreground"
+              >
+                <Mail className="h-4 w-4 shrink-0 text-primary" /> {CONTACT.email}
+              </a>
+            </li>
+            <li>
+              <a
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 transition-colors hover:text-foreground"
+              >
+                <MessageCircle className="h-4 w-4 shrink-0 text-primary" /> {CONTACT.phoneDisplay}
+              </a>
             </li>
             <li className="flex items-center gap-2">
-              <Phone className="h-4 w-4 shrink-0 text-primary" /> +1 (555) 012-3456
-            </li>
-            <li className="flex items-center gap-2">
-              <MapPin className="h-4 w-4 shrink-0 text-primary" /> Remote · Worldwide
+              <MapPin className="h-4 w-4 shrink-0 text-primary" /> {CONTACT.location}
             </li>
           </ul>
         </div>

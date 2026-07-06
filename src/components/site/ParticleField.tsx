@@ -14,7 +14,7 @@ export function ParticleField({ className = "" }: { className?: string }) {
     let w = 0;
     let h = 0;
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    const colors = ["rgba(52,211,153,", "rgba(45,212,191,", "rgba(110,231,183,"];
+    const colors = ["rgba(252,163,17,", "rgba(255,190,90,", "rgba(120,150,210,"];
     const parent = canvas.parentElement!;
 
     const particles = Array.from({ length: 60 }, () => ({

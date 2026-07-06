@@ -15,15 +15,38 @@ const variants: Record<Variant, string> = {
   ghost: "text-muted-foreground hover:text-foreground",
 };
 
-export const GlowButton = forwardRef<
-  HTMLAnchorElement,
-  { to: string; variant?: Variant; className?: string; children: React.ReactNode }
->(({ to, variant = "primary", className, children }, ref) => {
-  return (
-    <Link ref={ref} to={to} className={cn(base, variants[variant], className)}>
-      {children}
-    </Link>
-  );
-});
+type Props = {
+  to?: string;
+  href?: string;
+  variant?: Variant;
+  className?: string;
+  children: React.ReactNode;
+};
+
+export const GlowButton = forwardRef<HTMLAnchorElement, Props>(
+  ({ to, href, variant = "primary", className, children }, ref) => {
+    const classes = cn(base, variants[variant], className);
+
+    if (href) {
+      return (
+        <a
+          ref={ref}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={classes}
+        >
+          {children}
+        </a>
+      );
+    }
+
+    return (
+      <Link ref={ref} to={to ?? "/"} className={classes}>
+        {children}
+      </Link>
+    );
+  },
+);
 
 GlowButton.displayName = "GlowButton";

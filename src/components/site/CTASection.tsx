@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { GlowButton } from "./GlowButton";
+import { WHATSAPP_LINK } from "@/lib/site-data";
 
 export function CTASection() {
   return (
@@ -21,7 +22,7 @@ export function CTASection() {
           Let's build your digital presence and accelerate your growth.
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-          <GlowButton to="/contact">
+          <GlowButton href={WHATSAPP_LINK}>
             Schedule Free Consultation <ArrowRight className="h-4 w-4" />
           </GlowButton>
           <GlowButton to="/pricing" variant="outline">
