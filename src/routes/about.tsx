@@ -5,6 +5,8 @@ import { PageHeader } from "@/components/site/PageHeader";
 import { ProcessSection } from "@/components/site/ProcessSection";
 import { StatsShowcase } from "@/components/site/StatsShowcase";
 import { CTASection } from "@/components/site/CTASection";
+import { SectionHeading } from "@/components/site/SectionHeading";
+import { OFFICE_IMAGES, EXPERIENCE } from "@/lib/site-data";
 
 const VALUES = [
   { icon: Sparkles, title: "Craft", desc: "We sweat every pixel and every millisecond." },
