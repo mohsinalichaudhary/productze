@@ -5,6 +5,8 @@ import { PageHeader } from "@/components/site/PageHeader";
 import { ProcessSection } from "@/components/site/ProcessSection";
 import { StatsShowcase } from "@/components/site/StatsShowcase";
 import { CTASection } from "@/components/site/CTASection";
+import { SectionHeading } from "@/components/site/SectionHeading";
+import { OFFICE_IMAGES, EXPERIENCE } from "@/lib/site-data";
 
 const VALUES = [
   { icon: Sparkles, title: "Craft", desc: "We sweat every pixel and every millisecond." },
@@ -57,6 +59,67 @@ function AboutPage() {
           ))}
         </div>
       </section>
+
+      {/* Office / studio */}
+      <section className="px-6 py-14">
+        <SectionHeading
+          eyebrow="Based in Pakistan"
+          title={<>Inside our <span className="gradient-text">studio</span></>}
+          subtitle="A dedicated team building brands, content, and growth for clients worldwide."
+        />
+        <div className="mx-auto mt-12 grid max-w-6xl gap-6 md:grid-cols-2">
+          {OFFICE_IMAGES.map((img, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="overflow-hidden rounded-3xl glass"
+            >
+              <img
+                src={img.src}
+                alt={img.alt}
+                loading="lazy"
+                width={1280}
+                height={896}
+                className="h-full w-full object-cover"
+              />
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Experience */}
+      <section className="px-6 py-14">
+        <SectionHeading
+          eyebrow="Track record"
+          title={<>Experience that <span className="gradient-text">delivers</span></>}
+          subtitle="Hands-on across SEO, social media, news publishing, and digital marketing."
+        />
+        <div className="mx-auto mt-12 grid max-w-4xl gap-4">
+          {EXPERIENCE.map((e, i) => (
+            <motion.div
+              key={e.role + e.org}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.45, delay: i * 0.06 }}
+              className="rounded-2xl glass p-6 sm:flex sm:items-start sm:justify-between sm:gap-6"
+            >
+              <div>
+                <h3 className="font-bold">{e.role}</h3>
+                <p className="text-sm text-primary">{e.org}</p>
+                <p className="mt-2 text-sm text-muted-foreground">{e.desc}</p>
+              </div>
+              <span className="mt-2 shrink-0 text-xs font-medium text-muted-foreground sm:mt-0">
+                {e.period}
+              </span>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
       <StatsShowcase />
       <ProcessSection />
       <CTASection />

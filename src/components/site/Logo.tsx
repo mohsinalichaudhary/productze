@@ -1,40 +1,19 @@
 import { cn } from "@/lib/utils";
+import logoMark from "@/assets/productze-logo.png";
 
 /**
- * Productze logo. The mark is an upward growth trajectory with an arrowhead —
- * the literal business outcome the agency sells (growth), not decorative sparkle.
- * The negative-space bar-chart risers reinforce "measurable results."
+ * Productze brand mark — a custom monogram "P" that fuses an upward growth
+ * arrow with a forward play shape: the promise of momentum and results.
  */
 export function LogoMark({ className }: { className?: string }) {
   return (
-    <span
-      className={cn(
-        "grid shrink-0 place-items-center rounded-xl gradient-brand shadow-[var(--glow-violet)]",
-        className,
-      )}
-    >
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        aria-hidden
-        className="h-[58%] w-[58%] text-primary-foreground"
-      >
-        <path
-          d="M4 17 L10 11 L14 14 L20 7"
-          stroke="currentColor"
-          strokeWidth={2.4}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M15 7 H20 V12"
-          stroke="currentColor"
-          strokeWidth={2.4}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    </span>
+    <img
+      src={logoMark}
+      alt="Productze logo"
+      width={512}
+      height={512}
+      className={cn("shrink-0 object-contain", className)}
+    />
   );
 }
 
