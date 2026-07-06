@@ -6,6 +6,9 @@ import { toast } from "sonner";
 import { PageHeader } from "@/components/site/PageHeader";
 import { CONTACT, WHATSAPP_LINK } from "@/lib/site-data";
 
+const wa = (msg: string) =>
+  `https://wa.me/${CONTACT.whatsappNumber}?text=${encodeURIComponent(msg)}`;
+
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
