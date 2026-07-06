@@ -1,6 +1,8 @@
-import portfolioWeb from "@/assets/portfolio-web.jpg";
-import portfolioMarketing from "@/assets/portfolio-marketing.jpg";
 import portfolioAi from "@/assets/portfolio-ai.jpg";
+import coverShawls from "@/assets/cover-shawls.jpg";
+import coverWesteriya from "@/assets/cover-westeriya.jpg";
+import coverCreckler from "@/assets/cover-creckler.jpg";
+import coverKinewshd from "@/assets/cover-kinewshd.jpg";
 import office1 from "@/assets/office-1.jpg";
 import office2 from "@/assets/office-2.jpg";
 import avatar1 from "@/assets/avatar-1.jpg";
@@ -72,28 +74,28 @@ export const PORTFOLIO = [
     tag: "E-commerce",
     title: "Shawls Store",
     desc: "Premium shawls e-commerce store with product catalog, cart, and seamless checkout.",
-    image: portfolioWeb,
+    image: coverShawls,
     url: "https://shawls.lovable.app",
   },
   {
     tag: "E-commerce",
     title: "Westeriya Store",
     desc: "Feature-rich e-commerce platform with modern design, filtering, and optimized shopping.",
-    image: portfolioWeb,
+    image: coverWesteriya,
     url: "https://westeriya.lovable.app",
   },
   {
     tag: "Web Design",
     title: "Creckler Blog",
     desc: "Full blogging website with content management and SEO-optimized articles.",
-    image: portfolioMarketing,
+    image: coverCreckler,
     url: "https://creckler.com",
   },
   {
     tag: "News Portal",
     title: "KiNewsHD Urdu",
     desc: "WordPress news portal with category publishing and full Urdu language support.",
-    image: portfolioMarketing,
+    image: coverKinewshd,
     url: "https://urdu.kinewshd.com",
   },
   {
