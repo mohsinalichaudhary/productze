@@ -32,7 +32,9 @@ export function Footer() {
             {SOCIALS.map((s) => (
               <a
                 key={s.label}
-                href="#"
+                href={s.href}
+                target={s.href.startsWith("http") ? "_blank" : undefined}
+                rel={s.href.startsWith("http") ? "noopener noreferrer" : undefined}
                 aria-label={s.label}
                 className="grid h-9 w-9 place-items-center rounded-xl glass text-muted-foreground transition-colors hover:text-foreground"
               >
