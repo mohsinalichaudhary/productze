@@ -11,11 +11,8 @@ export function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-6 sm:pt-4">
       <nav className="mx-auto flex max-w-7xl items-center gap-4 rounded-2xl glass px-4 py-3 sm:px-6">
-        <Link to="/" className="flex min-w-0 items-center gap-2">
-          <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl gradient-brand shadow-[var(--glow-violet)]">
-            <Sparkles className="h-4 w-4 text-primary-foreground" />
-          </span>
-          <span className="truncate text-lg font-bold tracking-tight">Productze</span>
+        <Link to="/">
+          <Logo />
         </Link>
 
         <div className="mx-auto hidden items-center gap-1 lg:flex">
