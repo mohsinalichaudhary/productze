@@ -37,28 +37,30 @@ function ContactPage() {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
-    const name = String(data.get("name") ?? "");
-    const email = String(data.get("email") ?? "");
-    const company = String(data.get("company") ?? "");
-    const details = String(data.get("details") ?? "");
+    const name = String(data.get("name") ?? "").trim().slice(0, 100);
+    const email = String(data.get("email") ?? "").trim().slice(0, 255);
+    const company = String(data.get("company") ?? "").trim().slice(0, 100);
+    const details = String(data.get("details") ?? "").trim().slice(0, 1000);
 
-    const subject = `New project enquiry from ${name || "website"}`;
-    const body = [
+    const message = [
+      "Hi Productze, I'd like to enquire about a service.",
+      "",
       `Name: ${name}`,
       `Email: ${email}`,
-      `Company: ${company}`,
+      company ? `Company: ${company}` : null,
       "",
       "Project details:",
       details,
-    ].join("\n");
+    ]
+      .filter((line) => line !== null)
+      .join("\n");
 
-    window.location.href = `mailto:${CONTACT.email}?subject=${encodeURIComponent(
-      subject,
-    )}&body=${encodeURIComponent(body)}`;
+    window.open(wa(message), "_blank", "noopener,noreferrer");
 
     setSent(true);
-    toast.success("Opening your email app — we'll reply within 24 hours.");
+    toast.success("Opening WhatsApp with your details — we'll reply shortly.");
   };
+
 
   return (
     <>
