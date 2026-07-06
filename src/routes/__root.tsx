@@ -88,7 +88,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Productze builds powerful digital products & online presence for businesses — websites, SEO, branding, AI automation, and performance marketing.",
       },
       { name: "author", content: "Productze" },
-      { property: "og:title", content: "Productze — Digital Products, AI & Growth Marketing" },
+      { property: "og:title", content: "Productze — Digital Products, AI & Growth Marketing Agency" },
       {
         property: "og:description",
         content:
@@ -97,6 +97,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Productze" },
+      { name: "twitter:title", content: "Productze — Digital Products, AI & Growth Marketing Agency" },
+      { name: "description", content: "Productze builds powerful digital products & online presence for businesses — websites, SEO, branding, AI automation, and performance marketing." },
+      { property: "og:description", content: "Productze builds powerful digital products & online presence for businesses — websites, SEO, branding, AI automation, and performance marketing." },
+      { name: "twitter:description", content: "Productze builds powerful digital products & online presence for businesses — websites, SEO, branding, AI automation, and performance marketing." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1fd90717-315c-499f-aeec-53c093ab68ce/id-preview-0c92635e--24fa027f-5c79-452b-89eb-862bf90f472c.lovable.app-1783348514532.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1fd90717-315c-499f-aeec-53c093ab68ce/id-preview-0c92635e--24fa027f-5c79-452b-89eb-862bf90f472c.lovable.app-1783348514532.png" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
