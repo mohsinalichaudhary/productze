@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { Sparkles, Github, Twitter, Linkedin, Instagram, Mail, MapPin, Phone } from "lucide-react";
+import { Github, Twitter, Linkedin, Instagram, Mail, MapPin, Phone } from "lucide-react";
+import { Logo } from "./Logo";
 import { NAV_LINKS } from "@/lib/site-data";
 
 const RESOURCES = [
