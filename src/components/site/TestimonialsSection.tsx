@@ -32,12 +32,14 @@ export function TestimonialsSection() {
               "{t.quote}"
             </blockquote>
             <figcaption className="mt-6 flex items-center gap-3">
-              <span className="grid h-11 w-11 place-items-center rounded-full gradient-brand text-sm font-bold text-primary-foreground">
-                {t.name
-                  .split(" ")
-                  .map((w) => w[0])
-                  .join("")}
-              </span>
+              <img
+                src={t.avatar}
+                alt={t.name}
+                loading="lazy"
+                width={44}
+                height={44}
+                className="h-11 w-11 rounded-full object-cover ring-2 ring-primary/30"
+              />
               <span>
                 <span className="block text-sm font-semibold">{t.name}</span>
                 <span className="block text-xs text-muted-foreground">{t.role}</span>
