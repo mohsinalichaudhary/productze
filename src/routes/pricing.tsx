@@ -8,7 +8,7 @@ import { GlowButton } from "@/components/site/GlowButton";
 const PLANS = [
   {
     name: "Starter",
-    price: "$1,500",
+    price: "Rs 12,000",
     period: "/project",
     desc: "Perfect for a sharp, professional online presence.",
     features: ["5-page website", "Responsive design", "Basic SEO setup", "Contact forms", "2 weeks delivery"],
@@ -16,7 +16,7 @@ const PLANS = [
   },
   {
     name: "Growth",
-    price: "$4,500",
+    price: "Rs 25,000",
     period: "/project",
     desc: "For businesses ready to scale traffic and leads.",
     features: [
@@ -31,8 +31,8 @@ const PLANS = [
   },
   {
     name: "Scale",
-    price: "Custom",
-    period: "",
+    price: "Rs 50,000",
+    period: "/project",
     desc: "Full digital partner with AI & custom software.",
     features: [
       "Everything in Growth",
