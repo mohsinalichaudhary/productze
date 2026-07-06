@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
-import { Github, Twitter, Linkedin, Instagram, Mail, MapPin, Phone } from "lucide-react";
+import { Linkedin, Instagram, Mail, MapPin, MessageCircle } from "lucide-react";
 import { Logo } from "./Logo";
-import { NAV_LINKS } from "@/lib/site-data";
+import { NAV_LINKS, CONTACT, WHATSAPP_LINK } from "@/lib/site-data";
 
 const RESOURCES = [
   { label: "Portfolio", to: "/portfolio" },
