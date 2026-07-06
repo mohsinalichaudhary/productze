@@ -11,10 +11,10 @@ const RESOURCES = [
 ] as const;
 
 const SOCIALS = [
-  { icon: Twitter, label: "Twitter" },
-  { icon: Linkedin, label: "LinkedIn" },
-  { icon: Instagram, label: "Instagram" },
-  { icon: Github, label: "GitHub" },
+  { icon: MessageCircle, label: "WhatsApp", href: WHATSAPP_LINK },
+  { icon: Linkedin, label: "LinkedIn", href: "#" },
+  { icon: Instagram, label: "Instagram", href: "#" },
+  { icon: Mail, label: "Email", href: `mailto:${CONTACT.email}` },
 ];
 
 export function Footer() {
