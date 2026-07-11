@@ -7,6 +7,10 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
+  // Disable the nitro Cloudflare Worker preset so the build produces a plain
+  // static prerender output (client assets + static HTML) that can be hosted
+  // on any standard static web host with no Node.js server.
+  nitro: false,
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
