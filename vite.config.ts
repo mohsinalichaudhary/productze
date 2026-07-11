@@ -7,30 +7,9 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
-  // NOTE: nitro must stay enabled — Lovable's own hosting (preview + published)
-  // runs the Worker/SSR server build. Disabling it makes the hosted site 500.
-  // Prerendering below still emits static HTML into dist/client for hosts like
-  // Hostinger, so both static export and Lovable hosting work.
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
-    // Prerender every route to static HTML so the build output can be hosted
-    // on any plain static web host (e.g. Hostinger shared hosting) with no
-    // Node.js server. crawlLinks follows in-app <Link>s from each page.
-    prerender: {
-      enabled: true,
-      crawlLinks: true,
-      failOnError: true,
-    },
-    pages: [
-      { path: "/" },
-      { path: "/about" },
-      { path: "/contact" },
-      { path: "/portfolio" },
-      { path: "/pricing" },
-      { path: "/services" },
-      { path: "/solutions" },
-    ],
   },
 });
