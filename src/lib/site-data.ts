@@ -8,6 +8,30 @@ import office2 from "@/assets/office-2.jpg";
 import avatar1 from "@/assets/avatar-1.jpg";
 import avatar2 from "@/assets/avatar-2.jpg";
 import avatar3 from "@/assets/avatar-3.jpg";
+import team1 from "@/assets/team-1.jpg";
+import team2 from "@/assets/team-2.jpg";
+import team3 from "@/assets/team-3.jpg";
+
+export const TEAM = [
+  {
+    name: "Development",
+    role: "Websites, e-commerce & web apps",
+    image: team1,
+    alt: "Productze developer building a client website in the studio",
+  },
+  {
+    name: "Growth & SEO",
+    role: "Strategy, analytics & performance",
+    image: team2,
+    alt: "Productze strategists reviewing campaign performance data",
+  },
+  {
+    name: "Content & Social",
+    role: "Production, editing & community",
+    image: team3,
+    alt: "Productze content creator filming social media content",
+  },
+] as const;
 
 export const OFFICE_IMAGES = [
   { src: office1, alt: "Productze creative team collaborating in our Pakistan studio" },
@@ -114,6 +138,12 @@ export const PORTFOLIO = [
   },
 ] as const;
 
+export const EXTRA_PROJECTS = [
+  { name: "Zylo Services", desc: "Full website development and launch — zyloservices.com", url: "https://www.zyloservices.com" },
+  { name: "Blue World City", desc: "Social media management for one of Pakistan's largest housing projects.", url: "https://www.facebook.com/BlueWorldCity.ISB" },
+  { name: "ArifUrfi.com", desc: "Personal brand web design and build.", url: "https://arifurfi.com" },
+] as const;
+
 export const CONTENT_WINS = [
   {
     metric: "372,900",
@@ -142,6 +172,18 @@ export const STARTUP_CLIENTS = [
 ] as const;
 
 export const EXPERIENCE = [
+  {
+    role: "Social Media Manager",
+    org: "Blue World City, Islamabad",
+    period: "Present",
+    desc: "Managing social media for one of Pakistan's largest real-estate developments — content, community and lead generation.",
+  },
+  {
+    role: "Web Development",
+    org: "Zylo Services",
+    period: "Completed",
+    desc: "Designed and developed the full zyloservices.com website end to end.",
+  },
   {
     role: "SMM & News Editor",
     org: "KiNews HD",
