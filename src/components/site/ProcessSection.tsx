@@ -19,9 +19,9 @@ export function ProcessSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.5, delay: (i % 3) * 0.08 }}
-            className="group relative overflow-hidden rounded-3xl glass p-7 transition-all duration-300 hover:-translate-y-1.5"
+            className="group relative overflow-hidden rounded-2xl glass p-7 transition-colors duration-300 hover:bg-accent"
           >
-            <span className="block text-5xl font-bold text-transparent [-webkit-text-stroke:1px_oklch(0.7_0.16_162_/_0.55)]">
+            <span className="block text-5xl font-bold text-muted-foreground/40">
               {p.step}
             </span>
             <h3 className="mt-4 text-xl font-bold">{p.title}</h3>
